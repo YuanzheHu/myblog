@@ -1,0 +1,4 @@
+baseURL = 'https://yuanzhehu.github.io/'
+languageCode = 'en-us'
+title = 'Yuanzhe Hu'
+theme = "hugo-theme-stack"
