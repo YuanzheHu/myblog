@@ -1,4 +1,63 @@
+# 🔹 基本站点信息
 baseURL = 'https://yuanzhehu.github.io/'
 languageCode = 'en-us'
 title = 'Yuanzhe Hu'
 theme = "hugo-theme-stack"
+
+# 🔹 站点参数（确保文章出现在首页）
+[params]
+  mainSections = ["posts"] # 确保首页显示 posts 目录下的文章
+  description = "A personal blog by Yuanzhe Hu." # 站点描述（SEO）
+  defaultTheme = "auto" # 主题模式 (light, dark, auto)
+  showReadingTime = true # 显示阅读时间
+  showShareButtons = true # 文章页面显示分享按钮
+  showPostNavLinks = true # 文章页面显示上一篇/下一篇导航
+  showBreadCrumbs = true # 启用面包屑导航
+  showCodeCopyButtons = true # 代码块显示复制按钮
+
+# 🔹 文章作者信息（修复 RSS 错误）
+[params.author]
+  name = "Yuanzhe Hu"
+  email = "yuanzhehu2024@gmail.com"
+
+# 🔹 主页设置
+[params.home]
+  layout = "list" # 主页布局（list, card, compact）
+  showRecent = true # 显示最近文章
+
+# 🔹 头部导航菜单
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+# 🔹 代码高亮
+[markup]
+  [markup.highlight]
+    style = "monokai" # 代码高亮风格
+
+# 🔹 文章分类和标签
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+# 🔹 语言国际化（如果需要）
+[Languages]
+  [Languages.en]
+    languageName = "English"
+    weight = 1
